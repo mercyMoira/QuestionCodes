@@ -1,26 +1,26 @@
-/* ************************************ */
-/*										*/
-/*		# Dev.  : pjy4743@naver.com		*/
-/*		# Cont. : HeapSorting 			*/
-/*		# Date  : 2019-04-16			*/
-/*										*/
-/* ************************************ */
+/* ******************************************** */
+/*						*/
+/*		# Dev.  : mercyMoira		*/
+/*		# Cont. : HeapSorting		*/
+/*		# Date  : 2019-04-16		*/
+/*						*/
+/* ******************************************** */
 
 #include <iostream>
 using namespace std;
-
-int count = 1;
 
 void buildHeap(int *, int);
 void heapify(int *, int, int);
 void heapSort(int *, int);
 
+// 입력 배열을 힙 구조로 만들기
 void buildHeap(int *pArr, int index)
 {
 	for(int i=0; i<index/2; i++)
 		heapify(pArr, i, index);
 }
 
+// 최소힙으로 정렬
 void heapify(int *pArr, int k, int index)
 {
 	int left  = 2 * k;
@@ -53,6 +53,7 @@ void heapify(int *pArr, int k, int index)
 	}
 }
 
+// 힙정렬
 void heapSort(int* pArr, int index)
 {
 	buildHeap(pArr, index);
